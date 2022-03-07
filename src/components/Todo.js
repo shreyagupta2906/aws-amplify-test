@@ -3,6 +3,8 @@ import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import {RiCloseCircleLine} from 'react-icons/ri'
 import {GrNotification} from 'react-icons/gr'
+import { Routes, Route, Link } from "react-router-dom";
+
 
 
 function Todo({todos, completeTodo, removeTodo}) {
@@ -23,10 +25,10 @@ function Todo({todos, completeTodo, removeTodo}) {
           <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)} className = 'delete-icon'/>
 
-          <GrNotification/>
+          <GrNotification className='notification-icon'/>
 
           </div>
-      
+      <Link to="notifications"> Notifications</Link> 
       </div> 
       ))
       
