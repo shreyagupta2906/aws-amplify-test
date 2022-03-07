@@ -4,7 +4,7 @@ import TodoForm from './TodoForm'
 
 
 function TodoList() {
-  const [todos, SetTodos] = useState([])
+  const [todos, setTodos] = useState([])
 
   const addTodo = todo => {
     if(!todo.text || /^\s*$/.test(todo.text)) {
@@ -13,8 +13,17 @@ function TodoList() {
 
     const newTodos = [todo, ...todos];
 
-    SetTodos(newTodos);
+    setTodos(newTodos);
   };
+
+
+  const removeTodo = id => {
+    const removeArr = [...todos].filter(todo => todo.id !== id)
+
+    setTodos(removeArr);
+  };
+
+
 
 const completeTodo = id => {
   let updatedTodos = todos.map(todo => {
@@ -23,7 +32,7 @@ const completeTodo = id => {
     }
     return todo
   })
-  SetTodos(updatedTodos);
+  setTodos(updatedTodos);
 }
 
   return (
@@ -32,7 +41,7 @@ const completeTodo = id => {
       <TodoForm onSubmit={addTodo}/>
       <Todo
       todos={todos}
-      completeTodo={completeTodo} />
+      completeTodo={completeTodo} removeTodo={removeTodo} />
     </div>
   )
 }
