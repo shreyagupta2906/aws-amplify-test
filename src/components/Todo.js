@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import {RiCloseCircleLine} from 'react-icons/ri'
-import {TiEdit} from 'react-icons/ti'
+import {GrNotification} from 'react-icons/gr'
 
 
 function Todo({todos, completeTodo, removeTodo}) {
@@ -22,6 +22,8 @@ function Todo({todos, completeTodo, removeTodo}) {
 
           <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)} className = 'delete-icon'/>
+
+          <GrNotification/>
 
           </div>
       
