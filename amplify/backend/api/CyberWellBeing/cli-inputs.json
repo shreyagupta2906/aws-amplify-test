@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "CyberWellBeing",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/tmp/amplify-0c9e2a11-0ae8-4209-b9dd-bb068c4bb49c/amplify/backend/api/CyberWellBeing/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}

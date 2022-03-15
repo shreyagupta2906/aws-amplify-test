@@ -1,4 +1,3 @@
-
 import './App.css';
 import * as React from 'react';
 import { Fragment } from 'react'
@@ -8,6 +7,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import { Routes, Route, Link } from "react-router-dom";
 import Notifications from './components/Notifications';
+import './sw.js'
 
 
 
@@ -33,6 +33,30 @@ const userNavigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
+const config = { pushKey: "BB4oTXksYSxHgbCG9uYqWvJyttSdsTJEjL7Vxmav1K9XCDE19u8vk6Bdz0NdYRSyAMs4910f9sQsH611yK6wjr8" };
+async function subscribe(topic) {
+ const swReg = await navigator.serviceWorker.register("/sw.js");
+  const subscription = await swReg.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: urlB64ToUint8Array(config.pushKey),
+  });
+}
+function urlB64ToUint8Array(base64String) {
+  const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, "+")
+    .replace(/_/g, "/");
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+subscribe("news");
 
 export default function Example() {
   return (

@@ -1,0 +1,18 @@
+type Notifications @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userID: ID! @index(name: "byUser")
+}
+
+type Devices @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  devicename: String
+  userID: ID! @index(name: "byUser")
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstname: String
+  lastname: String
+  Devices: [Devices] @hasMany(indexName: "byUser", fields: ["id"])
+  Notifications: [Notifications] @hasMany(indexName: "byUser", fields: ["id"])
+}

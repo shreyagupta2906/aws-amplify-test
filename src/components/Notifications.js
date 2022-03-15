@@ -1,9 +1,6 @@
 
 import '../App.css';
 import * as React from 'react';
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useParams } from 'react-router-dom';
 
 
@@ -31,18 +28,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+
 export default function Example() {
     const {id}=useParams()
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
 
         <header className="bg-white shadow">
@@ -52,7 +43,7 @@ export default function Example() {
         </header>
         <main>
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            {/* Replace with your content */}
+            <h2>Would you like to set a notification?</h2>
             <div className="px-4 py-6 sm:px-0">
             </div>
             {/* /End replace */}

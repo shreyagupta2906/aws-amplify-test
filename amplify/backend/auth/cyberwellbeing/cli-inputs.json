@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "cyberwellbeing_identitypool_32d9de4c",
+    "allowUnauthenticatedIdentities": true,
+    "authSelections": "identityPoolOnly",
+    "resourceName": "cyberwellbeing",
+    "sharedId": "32d9de4c",
+    "serviceName": "Cognito",
+    "useDefault": "manual"
+  }
+}

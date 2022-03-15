@@ -1,0 +1,27 @@
+{
+    "staging": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-cyberwellbeing-staging-161936-authRole",
+            "UnauthRoleArn": "arn:aws:iam::770351615030:role/amplify-cyberwellbeing-staging-161936-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::770351615030:role/amplify-cyberwellbeing-staging-161936-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-cyberwellbeing-staging-161936-deployment",
+            "UnauthRoleName": "amplify-cyberwellbeing-staging-161936-unauthRole",
+            "StackName": "amplify-cyberwellbeing-staging-161936",
+            "StackId": "arn:aws:cloudformation:eu-west-2:770351615030:stack/amplify-cyberwellbeing-staging-161936/9a2fcc70-748c-11ec-99ad-0a242ffc02e8",
+            "AmplifyAppId": "d3o58g5y2cyt5s"
+        },
+        "categories": {
+            "auth": {
+                "undefined": {}
+            },
+            "notifications": {
+                "Pinpoint": {
+                    "Name": "Cyber-Well-Being-staging",
+                    "Id": "17da28c501a849dd9b18893562e7b9e9",
+                    "Region": "eu-west-2"
+                }
+            }
+        }
+    }
+}
