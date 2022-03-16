@@ -4,7 +4,7 @@ import { HashRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.render(
   <HashRouter>
@@ -12,6 +12,8 @@ ReactDOM.render(
 </HashRouter>,
   document.getElementById('root')
 );
+
+serviceWorkerRegistration.register({ pushKey: "BBBl-gcuChGcvlZOdvFBvYXt3UQcg9M8mm4tPOXEp6D0ecg_J-sXOUJJ3O1WkNn1G7H5aGzn3uLdOYwEDxjLJfU" });
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
