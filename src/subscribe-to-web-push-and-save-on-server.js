@@ -1,9 +1,9 @@
 const config = {
     pushKey:
-      "-- YOUR PUBLIC VAPID KEY --",
+      "BBBl-gcuChGcvlZOdvFBvYXt3UQcg9M8mm4tPOXEp6D0ecg_J-sXOUJJ3O1WkNn1G7H5aGzn3uLdOYwEDxjLJfU",
     appSyncUrl:
-      "-- YOUR APPSYNC URL",
-    appSyncApiKey: "-- YOUR APPSYNC API KEY --",
+      "https://gp6f66nfmbhxpc6w7mbjhu7ave.appsync-api.eu-west-2.amazonaws.com/graphql",
+    appSyncApiKey: "da2-ky5tdn762vej7gwri6qgbm7fqi",
   };
   async function subscribe(topic) {
     swReg = await navigator.serviceWorker.register("/sw.js");
